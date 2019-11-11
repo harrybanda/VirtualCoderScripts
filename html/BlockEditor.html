@@ -1,0 +1,158 @@
+<link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+  integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+  crossorigin="anonymous"
+/>
+
+<link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack-subset.css"
+/>
+
+<style>
+  body {
+    font-family: "Roboto";
+  }
+
+  .run-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    width: 100px;
+  }
+
+  .start-button {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    font-size: 20px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    height: 50px;
+    width: 150px;
+    left: 50%;
+    top: 50%;
+    margin-top: -25px;
+    margin-left: -75px;
+    position: fixed;
+    cursor: pointer;
+  }
+
+  .next-button {
+    background-color: #008cba;
+    border: none;
+    color: white;
+    padding: 15px 25px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    width: 100px;
+    display: none;
+  }
+
+  #actions {
+    float: right;
+    width: 100px;
+  }
+
+  #hider {
+    width: 500px;
+    height: 300px;
+    background-color: #282a36;
+  }
+
+  #blocklyDiv {
+    width: 500px;
+    height: 300px;
+  }
+
+  #toolbox-h {
+    display: inline-block;
+    width: 28%;
+    text-align: center;
+  }
+
+  #workspace-h {
+    display: inline-block;
+    width: 51%;
+    text-align: center;
+  }
+
+  #level-h {
+    display: inline-block;
+    width: 19%;
+    text-align: center;
+  }
+
+  #headers {
+    background-color: #7665a0;
+    color: white;
+    font-size: 12px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+  }
+
+  .srnTitle {
+    color: #50fa7b;
+    font-size: 30px;
+    text-align: center;
+    font-family: Hack, monospace;
+    padding-top: 50px;
+  }
+</style>
+
+<div id="hider"><div class="srnTitle">VIRTUAL CODER</div></div>
+
+<div id="headers">
+  <div id="toolbox-h">Toolbox</div>
+  <div id="workspace-h">
+    Workspace:
+    <div id="numOfBlocks" style="display:inline-block"></div>
+    /
+    <div id="maxBlocks" style="display:inline-block"></div>
+  </div>
+  <div id="level-h"></div>
+</div>
+
+<div id="blocklyDiv">
+  <div id="actions">
+    <button id="btnRun" class="run-button" type="button">
+      <i class="fas fa-play"></i>
+    </button>
+    <button id="btnNext" class="next-button" type="button">Next</button>
+  </div>
+</div>
+
+<button id="btnStart" class="start-button">Start</button>
+
+<xml id="toolbox_1" style="display: none">
+  <block type="move_forward"></block>
+  <block type="turn"></block>
+  <block type="turn"><field name="Turn">right</field></block>
+</xml>
+
+<xml id="toolbox_2" style="display: none">
+  <block type="move_forward"></block>
+  <block type="turn"></block>
+  <block type="turn"><field name="Turn">right</field></block>
+  <block type="repeat"></block>
+</xml>
+
+<xml id="toolbox_3" style="display: none">
+  <block type="move_forward"></block>
+  <block type="turn"></block>
+  <block type="turn"><field name="Turn">right</field></block>
+  <block type="repeat_goal"></block>
+</xml>
+
+<xml id="startBlocks" style="display: none">
+  <block type="start" deletable="false" movable="false"></block>
+</xml>
